@@ -14,12 +14,47 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
+// This is the function for generating a lower case character.
 function generatePassword() {
-  var question = prompt("Would you like to include lower case characters?");
-  if (
-}
+  var lowerQuestion = window.confirm("Would you like to include lower case characters?");
+    if (lowerQuestion) {
+      confirm(Math.floor(Math.random() * lowerChar.length));
+    }
+    else (!lowerQuestion)
+      // Do nothing
+    };
 
+// This is the function for generating an upper case character.
+function generatePassword() {
+  var upperQuestion = window.confirm("Would you like to include upper case characters?");
+    if (upperQuestion) {
+      confirm(Math.floor(Math.random() * upperChar.length));
+    }
+    else (!upperQuestion);
+      // Do nothing
+};
+
+// This is the function for generating a numeric character.
+function generatePassword() {
+  var numberQuestion = window.confirm("Would you like to include numeric characters?");
+    if (numberQuestion) {
+      confirm(Math.floor(Math.random() * numberChar.length));
+    }
+    else (!numberQuestion);
+      // Do nothing
+};
+
+// This is the function for generating an upper case character.
+function generatePassword() {
+  var specialQuestion = window.confirm("Would you like to include special characters?");
+    if (specialQuestion) {
+      confirm(Math.floor(Math.random() * specialChar.length));
+    }
+    else (!specialQuestion);
+      // Do nothing
+};
+
+var myPassword = lowerQuestion.concat(upperQuestion, numberQuestion, specialQuestion);
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
