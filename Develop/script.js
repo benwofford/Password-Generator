@@ -16,45 +16,38 @@ function writePassword() {
 }
 // This is the function for generating a lower case character.
 function generatePassword() {
+  var passwordLength = window.prompt ("How many characters would you like your password to have?")
   var lowerQuestion = window.confirm("Would you like to include lower case characters?");
-    if (lowerQuestion) {
-      confirm(Math.floor(Math.random() * lowerChar.length));
-    }
-    else (!lowerQuestion)
-      // Do nothing
-    };
-
-// This is the function for generating an upper case character.
-function generatePassword() {
   var upperQuestion = window.confirm("Would you like to include upper case characters?");
-    if (upperQuestion) {
-      confirm(Math.floor(Math.random() * upperChar.length));
-    }
-    else (!upperQuestion);
-      // Do nothing
-};
-
-// This is the function for generating a numeric character.
-function generatePassword() {
   var numberQuestion = window.confirm("Would you like to include numeric characters?");
-    if (numberQuestion) {
-      confirm(Math.floor(Math.random() * numberChar.length));
-    }
-    else (!numberQuestion);
-      // Do nothing
-};
-
-// This is the function for generating an upper case character.
-function generatePassword() {
   var specialQuestion = window.confirm("Would you like to include special characters?");
-    if (specialQuestion) {
-      confirm(Math.floor(Math.random() * specialChar.length));
-    }
-    else (!specialQuestion);
-      // Do nothing
-};
 
-var myPassword = lowerQuestion.concat(upperQuestion, numberQuestion, specialQuestion);
+  var possibleCharacters = []
+    if (lowerQuestion) {
+      possibleCharacters.concat(lowerChar)
+    }
+    if (upperQuestion) {
+      possibleCharacters.concat(upperChar)
+    }
+    if (numberQuestion) {
+      possibleCharacters.concat(numberChar)
+    }
+    if (specialQuestion) {
+      possibleCharacters.concat(specialChar)
+    }
+
+    var randomPassword = []
+  for(var i=0; i < passwordLength; i++) {
+    var randomNumber = Math.floor(Math.random() * possibleCharacters.length)
+    var randomCharacter = possibleCharacters[randomNumber];
+    randomPassword.push(randomCharacter)
+  }
+  console.log(randomPassword)
+  }
+
+
+
+// var myPassword = lowerQuestion.concat(upperQuestion, numberQuestion, specialQuestion);
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
