@@ -1,12 +1,12 @@
-# homework-week-3## Password Generator ##
+# Password Generator #
 
 This project's goal was to create a password generator that would provide random strings of characters chosen by the user to create a safe and secure password to use however they choose.
 
-You can access this project here: 
+You can access this project here: https://benwofford.github.io/homework-week-3/
 
 ## Motivation for Creation ##
 
-This provides a randomly generated output that will allow a user the opportunity to protect themselves and their data, "Identity theft is not a joke, Jim!" - Dwight Schrute
+This provides a randomly generated output that will allow a user the opportunity to protect themselves and their sensitive data, "Identity theft is not a joke, Jim!" - Dwight Schrute
 
 ## Build Status ##
 
@@ -27,7 +27,7 @@ Here is what a successful deployment looks like:
 https://github.com/benwofford/homework-week-3/issues/4#issue-976228818
 ## Features ##
 
-
+This website features the ability to create a strong and secure randomly generated password.
 
 ## Code Example ##
 
@@ -39,7 +39,7 @@ https://github.com/benwofford/homework-week-3/issues/4#issue-976228818
 
 ## How To Use ##
 
---
+Following the prompts will allow the user to create a password and guarantee a secure output for use.
 
 ## Contribute ##
 
