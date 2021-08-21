@@ -22,19 +22,26 @@ generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
   var passwordLength = window.prompt ("How many characters would you like your password to have?");
 
-  // Prevents user from choosing a number below 8
-while (passwordLength < 8) [
-  alert("Password length must be at least 8 characters."),
+// Alerts user if they enter in an item that is not a number
+while(isNaN(+passwordLength) ) {
+  alert("Please pick a number between 8 and 128 characters.")
 // This allows the user to change their answer
-  passwordLength = prompt("How many characters would you like your password to have?"),
-]
+  passwordLength = prompt("How many characters would you like your password to have?")
+}
+
+// Prevents user from choosing a number below 8
+while (passwordLength < 8) {
+  alert("Password length must be at least 8 characters.");
+// This allows the user to change their answer
+  passwordLength = prompt("How many characters would you like your password to have?");
+}
 
 // Prevents user from choosing a number greater than 128
-while (passwordLength > 128) [
-  alert("Password length must be less than 128 characters."),
+while (passwordLength > 128) {
+  alert("Password length must be less than 128 characters.");
 // This allows the user to change their answer
-  passwordLength = prompt("How many characters would you like your password to have?"),
-]
+  passwordLength = prompt("How many characters would you like your password to have?")
+}
 
   var lowerQuestion = window.confirm("Would you like to include lower case characters?");
   var upperQuestion = window.confirm("Would you like to include upper case characters?");
@@ -44,17 +51,22 @@ while (passwordLength > 128) [
 // This compiles the user's criteria for characters based on prompt responses
   var possibleCharacters = []
     if (lowerQuestion) {
-      possibleCharacters.concat(lowerChar)
+      possibleCharacters = possibleCharacters.concat(lowerChar)
     }
     if (upperQuestion) {
-      possibleCharacters.concat(upperChar)
+      possibleCharacters = possibleCharacters.concat(upperChar)
     }
     if (numberQuestion) {
-      possibleCharacters.concat(numberChar)
+      possibleCharacters = possibleCharacters.concat(numberChar)
     }
     if (specialQuestion) {
-      possibleCharacters.concat(specialChar)
+      possibleCharacters = possibleCharacters.concat(specialChar)
     }
+
+// This prompts the user if they did not choose any characters
+    if (possibleCharacters.length == 0) {
+      alert("You neglected to choose a character, please try again.");
+    } 
 
 // This assembles the random generation of criteria from above responses
     var randomPassword = []
@@ -63,13 +75,6 @@ while (passwordLength > 128) [
     var randomCharacter = possibleCharacters[randomNumber];
     randomPassword.push(randomCharacter);
   }
-console.log(randomPassword);
+
+return randomPassword.join("");
 }
-
-
-// Filling randomPassword with Characters
-// Getting password to fill in the box
-// README
-
-
-// var myPassword = lowerQuestion.concat(upperQuestion, numberQuestion, specialQuestion);
