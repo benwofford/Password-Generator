@@ -2,7 +2,7 @@
 
 This project's goal was to create a password generator that would provide random strings of characters chosen by the user to create a safe and secure password to use however they choose 🔒 🔑
 
-[Deployment] (https://benwofford.github.io/Password-Generator/)
+[Deployment](https://benwofford.github.io/Password-Generator/)
 
 ## Table of Contents
 
@@ -13,16 +13,16 @@ This project's goal was to create a password generator that would provide random
 
 ## Screenshots
 
-Here is an instance where the user chooses less than 8 characters:
+Here is an instance where the user chooses less than 8 characters,
 <img src="/assets/images/less-than-eight-chars.png" />
 
-Here is an instance where the user chooses more than 128 characters:
+Here is an instance where the user chooses more than 128 characters,
 <img src="/assets/images/more-than-128-chars.png" />
 
-Here is an instance where the user does not confirm any characters for the password:
+Here is an instance where the user does not confirm any characters for the password,
 <img src="/assets/images/no-chars.png" />
 
-Here is what a successful deployment looks like:
+Here is what a successful deployment looks like,
 <img src="/assets/images/success.png" />
 
 ## Features
