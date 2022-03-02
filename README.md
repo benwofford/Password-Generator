@@ -14,16 +14,16 @@ This project's goal was to create a password generator that would provide random
 ## Screenshots
 
 Here is an instance where the user chooses less than 8 characters,
-<img src="/assets/images/less-than-eight-chars.png" />
+<img src="/images/less-than-eight-chars.png" />
 
 Here is an instance where the user chooses more than 128 characters,
-<img src="/assets/images/more-than-128-chars.png" />
+<img src="/images/more-than-128-chars.png" />
 
 Here is an instance where the user does not confirm any characters for the password,
-<img src="/assets/images/no-chars.png" />
+<img src="/images/no-chars.png" />
 
 Here is what a successful deployment looks like,
-<img src="/assets/images/success.png" />
+<img src="/images/success.png" />
 
 ## Features
 
